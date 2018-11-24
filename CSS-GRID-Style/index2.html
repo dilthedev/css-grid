@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS GRID</title>
+    <style>
+      
+        .wrapper {
+            
+            display: grid;
+            
+            grid-template-columns: 33.3% 33.3% 33.3%;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(3,1fr); */
+            
+            grid-gap: 1em;
+            /* grid-column-gap: 1em; */
+            /* grid-row-gap: 1em;  */
+
+            /* grid-auto-rows: 100px; */
+            grid-auto-rows: minmax(100px,auto);
+
+            
+        }
+
+
+        .wrapper > div {
+            background: #eee;
+            padding: 1em;
+        }
+
+        .wrapper > div:nth-child(odd) {
+               background: #ddd; 
+        }
+
+        .nested {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows:minmax( 70px,auto);
+            grid-gap: 1em;
+
+        }
+
+        .nested > div {
+            border: #333 1px solid;
+            padding: 1em;
+        }
+
+        .nested > div:hover {
+            background: blue;
+            color: #eee;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        
+            <div>Lorem ipsum dolor sit.</div>
+            <div>Lorem ipsum dolor sit.</div>
+            <div class="nested">
+                <div>Lorem</div>
+                <div>Lorem</div>
+                <div>Lorem</div>
+                <div>Lorem</div>
+                <div>Lorem</div>
+                <div>Lorem</div>
+            </div>
+            <div>Voluptate esse Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reprehenderit molestias quasi ratione at repellendus velit quae eum, corrupti cumque, quas eveniet quisquam alias, in dolores veniam. Praesentium, possimus repellat!
+            Laudantium eaque omnis, dolores dolorem consectetur minus quidem, quis debitis ipsum sapiente provident! Dolore dolorem quasi, ducimus quisquam neque vero! Voluptates totam nihil ab necessitatibus voluptas dicta facere, aspernatur omnis!
+            Quam aspernatur voluptas ratione sunt aperiam quibusdam amet mollitia iusto. Aspernatur similique maiores laborum velit labore, magnam quibusdam accusantium alias? Pariatur voluptatibus cum, quod modi illo voluptates recusandae architecto maiores?
+            </div>
+            <div>Labore quas inventore hic?</div>
+            <div>Laborum inventore expedita eligendi.</div>
+            <div>Ut optio quos cum!</div>
+            <div>Lorem ipsum dolor sit.</div>
+            <div>Cupiditate praesentium expedita asperiores.</div>
+            <div>Expedita id cum quae!</div>
+            <div>Dolore aspernatur nemo illo!</div>    
+        
+    </div>
+</body>
+</html>
